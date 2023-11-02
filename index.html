@@ -8,30 +8,57 @@
     <script src="./script.js" defer></script>
   </head>
   <body>
-    <form action="" method="post">
-      <h1>Library</h1>
-      <p>Required fields are followed by <span aria-label="required">*</span></p>
-      <ul>
-        <li>
-          <label for="title">Title: <span aria-label="required">*</span></label>
-          <input type="text" id="title" name="user_title" required />
-        </li>
-        <li>
-          <label for="author">Author: <span aria-label="required">*</span></label>
-          <input type="text" id="author" name="user_author" required/>
-        </li>
-        <li>
-          <label for="pages">Pages: <span aria-label="required">*</span></label>
-          <input type="number" name="user_pages" id="pages" min="1" required/>
-        </li>
-        <li>
-          <label for="read">Read:</label>
-          <input type="checkbox" name="user_read" id="read" />
-        </li>
-        <li class="button">
-          <button type="submit">Add your book</button>
-        </li>
-      </ul>
-    </form>
+    <div class="container">
+      <form action="" method="post">
+        <h1>Library</h1>
+        <p>
+          Required fields are followed by <span aria-label="required">*</span>
+        </p>
+        <ul>
+          <li>
+            <label for="title"
+              >Title: <span aria-label="required">*</span></label
+            >
+            <input type="text" id="title" name="user_title" required />
+          </li>
+          <li>
+            <label for="author"
+              >Author: <span aria-label="required">*</span></label
+            >
+            <input type="text" id="author" name="user_author" required />
+          </li>
+          <li>
+            <label for="pages"
+              >Pages: <span aria-label="required">*</span></label
+            >
+            <input
+              type="number"
+              name="user_pages"
+              id="pages"
+              min="1"
+              required
+            />
+          </li>
+          <li>
+            <label for="read">Read:</label>
+            <input type="checkbox" name="user_read" id="read" />
+          </li>
+          <li class="button">
+            <button type="submit">Add your book</button>
+          </li>
+        </ul>
+      </form>
+
+      <table>
+        <tr>
+          <th>Sr no</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Pages</th>
+          <th>Read or Not</th>
+          <th>Action</th>
+        </tr>
+      </table>
+    </div>
   </body>
 </html>
