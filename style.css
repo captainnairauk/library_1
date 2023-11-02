@@ -17,7 +17,9 @@ ul {
 form li + li {
   margin-top: 1em;
 }
-
+p{
+  text-align: center;
+}
 label {
   /* Uniform size & alignment */
   display: inline-block;
