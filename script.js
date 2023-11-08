@@ -28,9 +28,11 @@ function addBook(){
   const pagesVal = pages.value;
   pages.value = '';
 
-  const readVal = read.value;
-  read.value = '';
-
+  // const readVal = read.value;
+  // read.value = '';
+  if(titleVal.trim() === '' || authorVal.trim() === '' || pagesVal.trim() === ''){
+    return;
+  }
   const row = document.createElement('tr');
   const titleTd = document.createElement('td');
   const authorTd = document.createElement('td');
@@ -46,7 +48,13 @@ function addBook(){
   row.appendChild(pagesTd);
   pagesTd.textContent = pagesVal;
   row.appendChild(readTd);
-  readTd.textContent = readVal;
+
+  if(read.checked === true){
+    readTd.textContent = "Yes";
+  } else{
+    readTd.textContent = "No";
+  }
+
   row.appendChild(btnTd);
   btnTd.appendChild(del);
   del.textContent = "Delete";
@@ -60,3 +68,6 @@ function addBook(){
 }
 
 btn.addEventListener('click', addBook);
+btn.addEventListener('click', function(){
+  read.checked = false;
+})
